@@ -1,16 +1,19 @@
 class PostsController < ApplicationController
 
   def new
-    @city = City.find(params[:city_id])
+    c
     @post = @city.posts.new
   end
 
-  def create
-    puts "hello"
+  def create  
     @city = City.find(params[:city_id])
     @post = @city.posts.create(post_params) 
   
     redirect_to city_path(@city)
+    end
+
+    def show
+      @post = Post.find(params[:id]) 
     end
 
   def edit
