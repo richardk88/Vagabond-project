@@ -1,3 +1,5 @@
 <h1><%= @post.title%></h1>
 <p><%= @post.synopsis%></p>
 <%= button_to "Edit Post", edit_city_post_path(@city.id, @post.id), method: :get%>
+
+<%= button_to "delete Post", city_post_path(@city.id, @post.id), method: :delete%>
