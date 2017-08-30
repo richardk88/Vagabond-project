@@ -2,3 +2,12 @@
 <div>
     <%= image_tag @city.picture%>
 </div>
+<%= button_to "New Post", new_city_post_path(@city), method: :get%>
+
+<ul>
+    <% @city.posts.each do |post| %>
+    <li> <%= post.title %> <%= post.synopsis %></li>
+
+    <%end%>
+    
+</ul>
