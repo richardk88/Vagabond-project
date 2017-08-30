@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def new
-    c
+    @city = City.find(params[:city_id])
     @post = @city.posts.new
   end
 
