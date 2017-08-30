@@ -13,6 +13,7 @@ class PostsController < ApplicationController
     end
 
     def show
+      @city = City.find(params[:city_id])
       @post = Post.find(params[:id]) 
     end
 
