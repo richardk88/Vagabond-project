@@ -1,11 +1,14 @@
-<%= form_for @post, url: city_posts_path do |f| %>
- <%= f.label :title %>
- <%= f.text_field :title %>
- <br/>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
 
- <%= f.label :synopsis %>
- <%= f.text_area :synopsis %>
- <br/>
+<%= form_for @post, url: city_posts_path do |f|%>
+<%= f.label :title %>
+<%= f.text_field :title, class: "form-control"%>
 
- <%= f.submit class: "button" %>
+<%= f.label :synopsis %>
+<%= f.text_area :synopsis, class: "form-control", style: "height: 300px;" %>
+
+  <%= f.submit  class: "button" %>
 <% end %>
+</div>
+</div>
