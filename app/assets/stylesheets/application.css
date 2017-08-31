@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+.navbar-color {
+    background-color: #86B8B1;
+}
+
 .navbar-logo {
     height: 50px;
     margin-top: -15px;
