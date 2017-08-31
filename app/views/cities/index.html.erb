@@ -9,7 +9,9 @@
     <div class="carousel-inner">
         <% @cities.each_with_index do |city, index| %>
             <%= content_tag :div, class: (index == 0 ? 'carousel-item active' : 'carousel-item')  do %>
-                <%=image_tag(city.picture, :class => '#d-block w-100')%>
+                <%= link_to city_path(city) do %>
+                    <%= image_tag(city.picture, :class => '#d-block w-100') %>
+                <% end %>
                 <%= content_tag :div, class: "carousel-caption d-none d-md-block" do %>
                     <%= city.name %>
                 <% end %>
