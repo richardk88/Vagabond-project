@@ -6,6 +6,7 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
   </ol>
+
   <div class="carousel-inner">
     <div class="carousel-item active">
       <%= image_tag 'girl.jpeg', class: 'd-block w-100', alt: 'First slide'%>
@@ -31,6 +32,7 @@
             <h3>ATLANTA</h3>
         </div>
     </div>
+
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -46,5 +48,12 @@
 <ul class='center'>
     <% @cities.each do |city| %>
         <%= link_to city.name, city_path(city) %>
+        <div class="carousel-item">
+            <%= image_tag 'pineapple.jpeg', class: 'd-block w-100', alt: 'Third slide'%>
+            <div class="carousel-caption d-none d-md-block">
+                <h3>ATLANTA</h3>
+            </div>
+        </div>
     <%end%>
 </ul>
+
