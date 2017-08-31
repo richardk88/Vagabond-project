@@ -1,0 +1,11 @@
+<%= form_for @post, url: city_posts_path do |f| %>
+ <%= f.label :title %>
+ <%= f.text_field :title %>
+ <br/>
+
+ <%= f.label :synopsis %>
+ <%= f.text_area :synopsis %>
+ <br/>
+
+ <%= f.submit class: "button" %>
+<% end %>

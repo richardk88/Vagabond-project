@@ -1,13 +1,3 @@
 <h2>Edit this Post</h2>
 
-<%= form_for @post, url: city_post_path do |f| %>
- <%= f.label :title %>
- <%= f.text_field :title %>
- <br/>
-
- <%= f.label :synopsis %>
- <%= f.text_area :synopsis %>
- <br/>
-
- <%= f.submit "Edit a post!"%>
-<% end %>
+<%= render "partials/post_form" %>
