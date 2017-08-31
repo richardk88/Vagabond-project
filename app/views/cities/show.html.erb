@@ -6,8 +6,8 @@
 
 <ul>
     <% @city.posts.order('created_at desc').each do |post| %>
-    <li> <%= link_to post.title, city_post_path(@city.id, post.id)  %> <%= post.synopsis %></li>
+    <li> <%= link_to post.title, city_post_path(@city.id, post.id)  %> <%= truncate post.synopsis, length:1000 %> <%= link_to  "continue", city_post_path(@city.id, post.id)  %></li>
 
     <%end%>
-    
+
 </ul>
