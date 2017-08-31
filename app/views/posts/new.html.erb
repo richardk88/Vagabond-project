@@ -1,3 +1,16 @@
 <h2>Create Post</h2>
 
-<%= render "partials/post_form" %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+
+<%= form_for @post, url: city_posts_path do |f|%>
+<%= f.label :title %>
+<%= f.text_field :title, class: "form-control"%>
+
+<%= f.label :synopsis %>
+<%= f.text_area :synopsis, class: "form-control", style: "height: 300px;" %>
+
+  <%= f.submit  class: "button" %>
+<% end %>
+</div>
+</div>
