@@ -9,3 +9,11 @@ City.create(
     name: "Atlanta",
     picture: "https://media.bizj.us/view/img/3972271/skyline-of-atlanta*750xx1600-900-0-1384.jpg"
 )
+City.create(
+    name: "San Francisco",
+    picture: "https://i.ytimg.com/vi/DrLNmSZ1Q44/maxresdefault.jpg"
+)
+City.create(
+    name: "London",
+    picture: "https://cdn.londonandpartners.com/assets/73295-640x360-london-skyline-ns.jpg"
+)
