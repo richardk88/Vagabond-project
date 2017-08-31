@@ -14,7 +14,7 @@
  *= require_self
  */
 .navbar-color {
-    background-color: #C8BA9D;
+    background-color: #181887;
     /* #86B8B1,#C8BA9D,#F0D8A8,#78483E,#FA2A00,#86B8B1,#C8BA9D,#F0D8A8 */
 }
 .navbar-logo {
@@ -23,11 +23,11 @@
 }
 
 .carousel, .carousel img{
-    width: 65%; 
+    width: 75%; 
     margin: 0 auto;
 }
 .carousel img {
-    height: 400px!important;
+    height: 400px;
 } 
 
 .center {
