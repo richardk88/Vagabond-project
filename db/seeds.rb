@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first
+Post.destroy_all
+City.destroy_all
 City.create(
     name: "Atlanta",
     picture: "https://media.bizj.us/view/img/3972271/skyline-of-atlanta*750xx1600-900-0-1384.jpg"
