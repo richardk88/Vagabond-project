@@ -126,3 +126,8 @@ color: #F6E8E5;
   box-shadow: 0 5px #F28B79;
   transform: translateY(4px);
 }
+
+#projectName {
+  font-size: 48px;
+  color: white;
+}
