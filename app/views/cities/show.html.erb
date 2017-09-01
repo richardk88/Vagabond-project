@@ -1,14 +1,14 @@
 <div class="titleButtonContainer">
-<h1><%= @city.name%></h1>
-<%= button_to "New Post", new_city_post_path(@city), method: :get, class: "button"%>
+    <h1 class='center'><%= @city.name%></h1>
+    <%= button_to "New Post", new_city_post_path(@city), method: :get, class: "button"%>
 </div>
 <div class="cityImage">
-    <%= image_tag @city.picture%>
+    <%= image_tag @city.picture, class: 'city-img-size'%>
 </div>
 
 
 
-<ul>
+<ul class='text-center'>
     <% @city.posts.order('created_at desc').each do |post| %>
     <li> <%= link_to post.title, city_post_path(@city.id, post.id)  %> <%= truncate post.synopsis, length:1000 %> <%= link_to  "continue", city_post_path(@city.id, post.id)  %></li>
 
