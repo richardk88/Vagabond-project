@@ -17,13 +17,13 @@
 <ul class='text-center'>
     <% @city.posts.order('created_at desc').take(10).each do |post| %>
     <div class='post-font card'> 
-        <h4 class="card-header"><%= link_to post.title, city_post_path(@city.id, post.id) %> (<%= time_ago_in_words(post.created_at) %>)</h4> 
+        <h4 class="card-header post-title"><%= link_to post.title, city_post_path(@city.id, post.id) %> <span class="post-timestamp">(<%= time_ago_in_words(post.created_at) %>)</span></h4> 
         <div class="card-body">
             <p class="card-text">
                 <%= truncate post.synopsis, length:1000 %> 
             </p>
         </div>
-        <div class="btn btn-primary"><%= link_to  "...See More", city_post_path(@city.id, post.id) %> </div> 
+        <div class="btn btn-primary"><%= link_to  "See More...", city_post_path(@city.id, post.id), class: 'see-more-btn' %> </div> 
     </div>
     <%end%>
 

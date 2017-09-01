@@ -178,7 +178,26 @@ color: #F6E8E5;
 
 .post-font {
   font-size: 2rem;
+  width: 60vw;
+  margin: 0 auto;
+  border: 1px solid rgba(115, 108, 108, 0.54);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
 }
+  .post-title {
+    font-size: 3rem;
+  }
+  .post-timestamp {
+    font-size: 1.5rem;
+  }
+  .btn-primary {
+    margin: 0 auto;
+    width: 150px;
+    box-shadow: 0 4px rgba(84, 82, 77, 0.74);
+  }
+  .see-more-btn {
+    color: white;
+  }
 
 footer {
   position: fixed;
