@@ -1,5 +1,10 @@
 <h1><%= @post.title%></h1>
 <p><%= @post.synopsis%></p>
-<%= button_to "Edit Post", edit_city_post_path(@city.id, @post.id), method: :get, class: "button"%>
-<br/>
-<%= button_to "Delete Post", city_post_path(@city.id, @post.id), method: :delete, class: "delete", data: {confirm: "Are you sure?"}%>
+
+<% if can? :update, @post %>
+  <td><%= button_to "Edit Post", edit_city_post_path(@city.id, @post.id), method: :get, class: "button"%></td>
+<% end %>
+      
+<% if can? :destroy, @post %>
+  <td><%= button_to "Delete Post", city_post_path(@city.id, @post.id), method: :delete, class: "delete", data: {confirm: "Are you sure?"}%></td>
+<% end %>
