@@ -9,11 +9,11 @@
   <td><%= button_to "Delete Post", city_post_path(@city.id, @post.id), method: :delete, class: "delete", data: {confirm: "Are you sure?"}%></td>
 <% end %>
 
-<h2>Comments</h2>
+<h2><%= @post.comments.count %> Comments On This Post</h2>
     <% @post.comments.order('created_at desc').each do |comment| %>
     <div>
       <h6><%= comment.body %></h6><br/>
-      <p>Posted By: <%= @current_user.email%></p>  
+      <p>Posted By: <%= current_user.email%></p>  
       <p><%= time_ago_in_words(comment.created_at)%></p>  
     </div>
   <%end%>
