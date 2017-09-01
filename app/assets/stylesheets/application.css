@@ -165,7 +165,11 @@ color: #F6E8E5;
   font-size: 2rem;
 }
 .success-alert {
-  color: green;
+  color: #22B122;
+  font-size: 2rem;
+}
+
+.post-font {
   font-size: 2rem;
 }
 
