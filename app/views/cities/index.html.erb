@@ -12,7 +12,7 @@
                 <%= link_to city_path(city) do %>
                     <%= image_tag(city.picture, :class => '#d-block w-100') %>
                 <% end %>
-                <%= content_tag :div, class: "carousel-caption d-none d-md-block" do %>
+                <%= content_tag :div, class: "carousel-caption d-none d-md-block location-center" do %>
                     <%= city.name %>
                 <% end %>
             <% end %>
