@@ -9,7 +9,12 @@
   <td><%= button_to "Delete Post", city_post_path(@city.id, @post.id), method: :delete, class: "delete", data: {confirm: "Are you sure?"}%></td>
 <% end %>
 
+<% if @post.comments.count > 1 %>
 <h2><%= @post.comments.count %> Comments On This Post</h2>
+<% else %>
+<h2><%= @post.comments.count %> Comment On This Post</h2>
+<% end %>
+
     <% @post.comments.order('created_at desc').each do |comment| %>
     <div>
       <h6><%= comment.body %></h6><br/>
