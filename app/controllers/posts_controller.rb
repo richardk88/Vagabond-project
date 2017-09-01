@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 
     def show
       @city = City.find(params[:city_id])
-      @post = Post.find(params[:id]) 
+      @post = Post.find(params[:id])
       @comment = @post.comments.new
     end
 
