@@ -1,3 +1,4 @@
+<div class="text-center">
 <h1><%= @post.title%></h1>
 <p><%= @post.synopsis%></p>
 
@@ -14,12 +15,15 @@
 <% else %>
 <h2><%= @post.comments.count %> Comment On This Post</h2>
 <% end %>
+</div>
 
     <% @post.comments.order('created_at desc').each do |comment| %>
-    <div>
-      <h6><%= comment.body %></h6><br/>
-      <p>Posted By: <%= current_user.email%></p>  
-      <p><%= time_ago_in_words(comment.created_at)%></p>  
+    <div class='post-font card'>
+      <div class='card-body'>
+        <p><%= comment.body %></p>
+        <p>Posted By: <%= current_user.email%></p>  
+        <p><%= time_ago_in_words(comment.created_at)%></p>  
+      </div>
     </div>
   <%end%>
 
