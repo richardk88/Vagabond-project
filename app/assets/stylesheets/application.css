@@ -92,12 +92,13 @@ body {
   font-size: 24px;
   text-align: center;
   outline: none;
-  color: #78483E;
+  color: white;
   background-color: #86B8B1;
-  border: none;
+  border: 1 solid rgba(121, 118, 118, 0.49);
   border-radius: 10px;
-  box-shadow: 0 4px #999;
+  box-shadow: 0 4px rgba(84, 82, 77, 0.74);
   margin: 1%;
+  
 }
 
 .button:hover {background-color: #5d807b}
@@ -113,7 +114,7 @@ body {
   font-size: 24px;
   text-align: center;
   outline: none;
-  color: #78483E;
+  color: white;
   background-color: #86B8B1;
   border: none;
   border-radius: 10px;
@@ -134,11 +135,11 @@ body {
   font-size: 24px;
   text-align: center;
   outline: none;
-  color: #78483E;
+  color: white;
   background-color: #86B8B1;
   border: none;
   border-radius: 10px;
-  box-shadow: 0 4px #999;
+  box-shadow: 0 4px red;
   margin: 1%;
 }
 
@@ -153,4 +154,14 @@ color: #F6E8E5;
   color: #F6E8E5;
   box-shadow: 0 5px #F28B79;
   transform: translateY(4px);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: rgba(0, 0, 0, 0.88);
+  color: white;
 }
