@@ -1,5 +1,6 @@
 <div class="titleButtonContainer">
-    <h1 class='center'><%= @city.name%></h1>
+    <div></div>
+    <h1 class='location-name'><%= @city.name%></h1>
     <%= button_to "New Post", new_city_post_path(@city), method: :get, class: "button"%>
 </div>
 <div class="cityImage">
@@ -10,12 +11,20 @@
 
 <div class='success-alert text-center'><%= flash[:alert]%></div>
 
+
 <br />
 
 <ul class='text-center'>
     <% @city.posts.order('created_at desc').take(10).each do |post| %>
-    <p class='post-font'> <%= link_to post.title, city_post_path(@city.id, post.id)  %> <%= truncate post.synopsis, length:1000 %> <%= link_to  "...See More", city_post_path(@city.id, post.id) %> (<%= time_ago_in_words(post.created_at)%>) </p>
-
+    <div class='post-font card'> 
+        <h4 class="card-header"><%= link_to post.title, city_post_path(@city.id, post.id) %> (<%= time_ago_in_words(post.created_at) %>)</h4> 
+        <div class="card-body">
+            <p class="card-text">
+                <%= truncate post.synopsis, length:1000 %> 
+            </p>
+        </div>
+        <div class="btn btn-primary"><%= link_to  "...See More", city_post_path(@city.id, post.id) %> </div> 
+    </div>
     <%end%>
 
 </ul>
