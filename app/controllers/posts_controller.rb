@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     if(@post.valid? and @post.save)
       redirect_to city_path(@city)
       else
-        flash[:alert] = "need both title and synopsis"
+        flash[:alert] = "* Need Both Title and Synopsis *"
         redirect_to new_city_post_path
       end
     end
@@ -22,7 +22,6 @@ class PostsController < ApplicationController
     def show
       @city = City.find(params[:city_id])
       @post = Post.find(params[:id]) 
-      puts "This is ID #{current_user.id}"
     end
 
   def edit

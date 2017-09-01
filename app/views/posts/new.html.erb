@@ -1,16 +1,17 @@
 <h2 class='text-center'>Create Post</h2>
 
+<div class='alert text-center'><%= flash[:alert]%></div>
+
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
+    <%= form_for @post, url: city_posts_path do |f|%>
+    <h4><%= f.label :title %></h4>
+    <%= f.text_field :title, class: "form-control"%>
 
-<%= form_for @post, url: city_posts_path do |f|%>
-<h4><%= f.label :title %></h4>
-<%= f.text_field :title, class: "form-control"%>
+    <h4><%= f.label :synopsis %></h4>
+    <%= f.text_area :synopsis, class: "form-control", style: "height: 300px;" %>
 
-<h4><%= f.label :synopsis %></h4>
-<%= f.text_area :synopsis, class: "form-control", style: "height: 300px;" %>
-
-  <%= f.submit  class: "button" %>
-<% end %>
-</div>
+      <%= f.submit  class: "button" %>
+    <% end %>
+  </div>
 </div>
