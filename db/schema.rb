@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(version: 20170901133854) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "slug"
-    t.string "friendly_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -41,7 +39,6 @@ ActiveRecord::Schema.define(version: 20170901133854) do
     t.bigint "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "slug"
     t.bigint "user_id"
     t.index ["city_id"], name: "index_posts_on_city_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
