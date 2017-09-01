@@ -22,6 +22,7 @@ class PostsController < ApplicationController
     def show
       @city = City.find(params[:city_id])
       @post = Post.find(params[:id]) 
+      @comment = @post.comments.new
       puts "This is ID #{current_user.id}"
     end
 

@@ -8,3 +8,25 @@
 <% if can? :destroy, @post %>
   <td><%= button_to "Delete Post", city_post_path(@city.id, @post.id), method: :delete, class: "delete", data: {confirm: "Are you sure?"}%></td>
 <% end %>
+
+<h2>Comments</h2>
+    <% @post.comments.order('created_at desc').each do |comment| %>
+    <div>
+      <h6><%= comment.body %></h6><br/>
+      <p>Posted By: <%= @current_user.email%></p>  
+      <p><%= time_ago_in_words(comment.created_at)%></p>  
+    </div>
+  <%end%>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+
+    <%= form_for @comment, url: city_post_path, method: :post do |f|%>
+
+      <h4><%= f.label :add_A_Comment %></h4>
+        <%= f.text_area :body, class: "form-control", style: "height: 300px;" %>
+      
+      <%= f.submit  class: "button" %>
+    <% end %>
+  </div>
+</div>
