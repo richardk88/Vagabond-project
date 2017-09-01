@@ -5,15 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first
+Post.destroy_all
+City.destroy_all
+
 City.create(
     name: "Atlanta",
-    picture: "https://media.bizj.us/view/img/3972271/skyline-of-atlanta*750xx1600-900-0-1384.jpg"
+    picture: "https://wallpaperhdzone.com/wp-content/uploads/2016/09/wallpaper-atlanta-HD2.jpg"
 )
 City.create(
     name: "San Francisco",
-    picture: "https://i.ytimg.com/vi/DrLNmSZ1Q44/maxresdefault.jpg"
+    picture: "https://images.pexels.com/photos/7653/pexels-photo.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 )
 City.create(
     name: "London",
-    picture: "https://cdn.londonandpartners.com/assets/73295-640x360-london-skyline-ns.jpg"
+    picture: "https://images.pexels.com/photos/34729/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb"
 )
