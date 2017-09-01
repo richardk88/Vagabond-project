@@ -162,7 +162,11 @@ color: #F6E8E5;
 
 .alert {
   color: red;
-  font-size: 3rem;
+  font-size: 2rem;
+}
+.success-alert {
+  color: green;
+  font-size: 2rem;
 }
 
 footer {

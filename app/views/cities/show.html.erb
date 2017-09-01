@@ -6,11 +6,11 @@
     <%= image_tag @city.picture, class: 'city-img-size'%>
 </div>
 
-
+<div class='success-alert text-center'><%= flash[:alert]%></div>
 
 <ul class='text-center'>
     <% @city.posts.order('created_at desc').each do |post| %>
-    <li> <%= link_to post.title, city_post_path(@city.id, post.id)  %> <%= truncate post.synopsis, length:1000 %> <%= link_to  "continue", city_post_path(@city.id, post.id)  %></li>
+    <li> <%= link_to post.title, city_post_path(@city.id, post.id)  %> <%= truncate post.synopsis, length:1000 %> <%= link_to  "continue", city_post_path(@city.id, post.id) %> (<%= time_ago_in_words(post.created_at)%>) </li>
 
     <%end%>
 

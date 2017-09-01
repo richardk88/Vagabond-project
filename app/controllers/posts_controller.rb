@@ -12,6 +12,7 @@ class PostsController < ApplicationController
     @city = City.find(params[:city_id])
     @post = @city.posts.create(post_params) 
     if(@post.valid? and @post.save)
+      flash[:alert] = "Successful Post!"
       redirect_to city_path(@city)
       else
         flash[:alert] = "* Need Both Title and Synopsis *"
