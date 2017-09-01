@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first
 Post.destroy_all
 City.destroy_all
-
 City.create(
     name: "Atlanta",
     picture: "https://wallpaperhdzone.com/wp-content/uploads/2016/09/wallpaper-atlanta-HD2.jpg"
