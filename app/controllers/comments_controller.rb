@@ -9,10 +9,10 @@ class CommentsController < ApplicationController
         @post = Post.find(params[:id])  
         @comment = @post.comments.create(comment_params) 
         if(@comment.valid? and @comment.save)
-          redirect_to city_post_path(@post)
+          redirect_to city_post_path
           else
             flash[:alert] = "Unsuccessful Post"
-            redirect_to city_post_path(@post)
+            redirect_to city_post_path
         end
     end
     
