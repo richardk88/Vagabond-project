@@ -1,7 +1,5 @@
-<div class="titleButtonContainer">
-    <div></div>
-    <h1 class='location-name'><%= @city.name%></h1>
-    <%= button_to "New Post", new_city_post_path(@city), method: :get, class: "button"%>
+<div>
+    <h1 class='location-name text-center'><%= @city.name%></h1>
 </div>
 <div class="cityImage">
     <%= image_tag @city.picture, class: 'city-img-size'%>
@@ -13,6 +11,8 @@
 
 
 <br />
+
+<div><%= button_to "New Post", new_city_post_path(@city), method: :get, class: "button"%></div>
 
 <ul class='text-center'>
     <% @city.posts.order('created_at desc').take(10).each do |post| %>
