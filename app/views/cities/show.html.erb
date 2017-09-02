@@ -20,7 +20,7 @@
         <h4 class="card-header post-title"><%= link_to post.title, city_post_path(@city.id, post.id) %> <span class="post-timestamp">(<%= time_ago_in_words(post.created_at) %>)</span></h4> 
         <div class="card-body">
             <p class="card-text">
-                <%= truncate post.synopsis, length:1000 %> 
+                <%= truncate post.synopsis, length:250 %> 
             </p>
         </div>
         <div class="btn btn-primary"><%= link_to  "See More...", city_post_path(@city.id, post.id), class: 'see-more-btn' %> </div> 
