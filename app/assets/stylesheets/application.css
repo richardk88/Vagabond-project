@@ -171,6 +171,10 @@ color: #F6E8E5;
   font-size: 3rem;
 }
 
+.post-synopsis {
+  margin: 0 18%;
+}
+
 .post-font {
   font-size: 2rem;
   width: 60vw;
