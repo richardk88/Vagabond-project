@@ -137,8 +137,8 @@ body {
 }
 
 .delete {
-  padding: 10px 20px;
-  font-size: 24px;
+  padding: 5px 12px;
+  font-size: 1.8rem;
   text-align: center;
   outline: none;
   color: white;
