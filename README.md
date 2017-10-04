@@ -19,5 +19,5 @@
 <br />
 <h3> Links </h3><br/>
 * <a href="http://project-rover.populr.me/pitch"> Pitch site </a><br/>
-* <a href="http://project-rover.herokuapp.com"> Live Site </a><br/>
+* <a href="https://project-rovr.herokuapp.com/"> Live Site </a><br/>
 * <a href="https://trello.com/b/a9r6egwm/project-vagabond-%F0%9F%8F%95%EF%B8%8F"> Trello </a> <br/>
